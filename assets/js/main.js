@@ -23,10 +23,30 @@ function setLang(lang) {
 
   // Save preference
   localStorage.setItem('akin_lang', lang);
+
+  // Mobil dropdown'ı kapat
+  document.querySelector('.lang-switcher').classList.remove('open');
 }
 
 document.querySelectorAll('.lang-btn').forEach(btn => {
   btn.addEventListener('click', () => setLang(btn.dataset.lang));
+});
+
+// Mobil: seçili dil etiketine tıklayınca dropdown aç/kapat
+document.querySelector('.lang-switcher').addEventListener('click', function(e) {
+  if (window.innerWidth <= 768) {
+    // Aktif butona tıklandıysa dropdown'ı toggle et
+    if (e.target.classList.contains('active')) {
+      this.classList.toggle('open');
+    }
+  }
+});
+
+// Dışarı tıklayınca kapat
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.lang-switcher')) {
+    document.querySelector('.lang-switcher').classList.remove('open');
+  }
 });
 
 // Load saved lang
