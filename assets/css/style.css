@@ -27,6 +27,10 @@ body {
 
 body[dir="rtl"] { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
 
+/* RTL: navbar düzeni sabit kalır */
+[dir="rtl"] .navbar       { direction: ltr; }
+[dir="rtl"] .lang-switcher { direction: ltr; }
+
 img { max-width: 100%; display: block; }
 a  { text-decoration: none; color: inherit; }
 ul { list-style: none; }
@@ -501,15 +505,18 @@ ul { list-style: none; }
   display: none;
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.62);
   color: #fff;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.6rem;
+  font-weight: 800;
   align-items: center;
   justify-content: center;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   cursor: pointer;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+  border: 2px solid rgba(201,168,76,0.4);
+  border-radius: 8px;
 }
 
 /* Lightbox */
@@ -844,7 +851,8 @@ footer .tagline {
     display: none;
     position: absolute;
     top: calc(100% + 8px);
-    right: 0;
+    right: 0 !important;
+    left: auto !important;
     background: rgba(10,10,10,0.97);
     border: 1px solid rgba(201,168,76,0.3);
     border-radius: 8px;
