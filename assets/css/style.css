@@ -876,7 +876,7 @@ footer .tagline {
   }
   .hero-bg {
     background-image: url('../hero-bg-mobile.png');
-    background-position: center center;
+    background-position: 65% center;
     transform: scale(1);
     transition: none;
   }
