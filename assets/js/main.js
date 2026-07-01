@@ -102,6 +102,19 @@ window.addEventListener('load', () => {
 });
 
 
+// ===== GALERİ GENİŞLET =====
+function expandGallery(e, index) {
+  const grid = document.querySelector('.gallery-grid');
+  if (window.innerWidth <= 768 && !grid.classList.contains('expanded')) {
+    e.stopPropagation();
+    grid.classList.add('expanded');
+    // Genişletince peek görseli normal lightbox'a bağla
+    document.querySelector('.gallery-peek').onclick = () => openLightbox(index);
+  } else {
+    openLightbox(index);
+  }
+}
+
 // ===== LIGHTBOX =====
 const galleryImages = [
   'assets/arac-6-ic-yan.jpg',
