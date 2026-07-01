@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Akın Transfer — Muğla VIP Transfer Hizmeti. Dalaman Havalimanı, Fethiye, Marmaris, Dalyan, Ortaca, Göcek, Kaş, Kalkan. Mercedes Vito ile lüks transfer.">
+  <title>Akın Transfer | VIP Transfer Muğla</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar" dir="ltr">
+  <a href="#home" class="nav-logo">
+    <img src="assets/logo.png" alt="Akın Transfer Logo">
+  </a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home"     data-i18n="nav_home">Ana Sayfa</a></li>
+    <li><a href="#services" data-i18n="nav_services">Hizmetler</a></li>
+    <li><a href="#vehicle"  data-i18n="nav_vehicle">Araç</a></li>
+    <li><a href="#regions"  data-i18n="nav_regions">Bölgeler</a></li>
+    <li><a href="#gallery"  data-i18n="nav_gallery">Galeri</a></li>
+    <li><a href="#contact"  data-i18n="nav_contact">İletişim</a></li>
+  </ul>
+
+  <div style="display:flex;align-items:center;gap:16px;">
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="tr">TR</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="ar">AR</button>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge" data-i18n="hero_badge">7 Kişilik Konfor</div>
+    <p data-i18n="hero_subtitle" style="margin-top:12px;">Mercedes Vito ile Muğla'nın en prestijli transfer deneyimi</p>
+    <a href="#contact" class="btn-gold">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+      <span data-i18n="hero_cta">Rezervasyon Yap</span>
+    </a>
+  </div>
+  <!-- Sabit scroll okları -->
+  <div class="scroll-arrow scroll-down" id="scrollDown" onclick="scrollStep(1)" title="Aşağı kaydır">
+    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+  </div>
+  <div class="scroll-arrow scroll-up" id="scrollUp" onclick="scrollStep(-1)" title="Yukarı kaydır">
+    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2><span data-i18n="services_title">Hizmetlerimiz</span></h2>
+      <div class="divider"></div>
+      <p data-i18n="services_subtitle">Her anınızı özel kılıyoruz</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">✈️</div>
+        <h3 data-i18n="s1_title">Havalimanı Transferi</h3>
+        <p data-i18n="s1_desc">Dalaman Havalimanı'ndan bölgenin tüm noktalarına konforlu, zamanında ve güvenli transfer hizmeti.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🏨</div>
+        <h3 data-i18n="s2_title">Otel Transferi</h3>
+        <p data-i18n="s2_desc">Marmaris, Fethiye, Dalyan ve çevre otellere kapıdan kapıya VIP transfer hizmeti.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">💐</div>
+        <h3 data-i18n="s3_title">Düğün & Gelin Arabası</h3>
+        <p data-i18n="s3_desc">En özel gününüzde Mercedes Vito ile VIP gelin arabası hizmeti. Çiçek süslemeli, kamera eşliğinde.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VEHICLE ===== -->
+<section class="vehicle" id="vehicle">
+  <div class="container">
+    <div class="vehicle-inner">
+      <div class="vehicle-img-wrap reveal">
+        <img src="assets/arac-6-ic-yan.jpg" alt="Mercedes Vito Tourer" loading="lazy">
+      </div>
+      <div class="vehicle-info reveal">
+        <h2><span data-i18n="vehicle_title">Aracımız</span></h2>
+        <div class="divider" style="margin:16px 0 20px;"></div>
+        <p data-i18n="vehicle_subtitle">Mercedes Vito Tourer — 7 Kişilik Premium Konfor</p>
+        <div class="features-grid" style="margin-top:32px;">
+          <div class="feature-item">
+            <span class="fi">👥</span>
+            <span data-i18n="v_feature1">7 Kişilik Kapasite</span>
+          </div>
+          <div class="feature-item">
+            <span class="fi">❄️</span>
+            <span data-i18n="v_feature2">Klima & Isıtma</span>
+          </div>
+          <div class="feature-item">
+            <span class="fi">🪑</span>
+            <span data-i18n="v_feature3">Deri Koltuklar</span>
+          </div>
+          <div class="feature-item">
+            <span class="fi">🧳</span>
+            <span data-i18n="v_feature4">Bagaj Kapasitesi</span>
+          </div>
+          <div class="feature-item">
+            <span class="fi">👨‍✈️</span>
+            <span data-i18n="v_feature5">Profesyonel Şoför</span>
+          </div>
+          <div class="feature-item">
+            <span class="fi">🕐</span>
+            <span data-i18n="v_feature6">7/24 Hizmet</span>
+          </div>
+        </div>
+        <div style="margin-top:36px;">
+          <a href="#contact" class="btn-gold" data-i18n="hero_cta">Rezervasyon Yap</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REGIONS ===== -->
+<section class="regions" id="regions">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2><span data-i18n="regions_title">Hizmet Bölgelerimiz</span></h2>
+      <div class="divider"></div>
+      <p data-i18n="regions_subtitle">Muğla ve çevresinin tüm noktalarına hizmet veriyoruz</p>
+    </div>
+    <div class="regions-grid">
+      <div class="region-card reveal">
+        <div class="region-icon">✈️</div>
+        <div>
+          <h3 data-i18n="r1">Dalaman Havalimanı</h3>
+          <p>Muğla</p>
+        </div>
+      </div>
+      <div class="region-card reveal">
+        <div class="region-icon">⚓</div>
+        <div>
+          <h3 data-i18n="r2">Fethiye</h3>
+          <p>Muğla</p>
+        </div>
+      </div>
+      <div class="region-card reveal">
+        <div class="region-icon">🌊</div>
+        <div>
+          <h3 data-i18n="r3">Ortaca</h3>
+          <p>Muğla</p>
+        </div>
+      </div>
+      <div class="region-card reveal">
+        <div class="region-icon">🐢</div>
+        <div>
+          <h3 data-i18n="r4">Dalyan</h3>
+          <p>Muğla</p>
+        </div>
+      </div>
+      <div class="region-card reveal">
+        <div class="region-icon">🏖️</div>
+        <div>
+          <h3 data-i18n="r5">Marmaris</h3>
+          <p>Muğla</p>
+        </div>
+      </div>
+      <div class="region-card reveal">
+        <div class="region-icon">⛵</div>
+        <div>
+          <h3 data-i18n="r6">Göcek</h3>
+          <p>Muğla</p>
+        </div>
+      </div>
+      <div class="region-card reveal">
+        <div class="region-icon">🌺</div>
+        <div>
+          <h3 data-i18n="r7">Kaş</h3>
+          <p>Antalya</p>
+        </div>
+      </div>
+      <div class="region-card reveal">
+        <div class="region-icon">🏔️</div>
+        <div>
+          <h3 data-i18n="r8">Kalkan</h3>
+          <p>Antalya</p>
+        </div>
+      </div>
+      <div class="region-card reveal">
+        <div class="region-icon">🏝️</div>
+        <div>
+          <h3 data-i18n="r9">Sarıgerme</h3>
+          <p>Muğla</p>
+        </div>
+      </div>
+      <div class="region-card reveal">
+        <div class="region-icon">🌿</div>
+        <div>
+          <h3 data-i18n="r10">Datça</h3>
+          <p>Muğla</p>
+        </div>
+      </div>
+      <div class="region-card reveal">
+        <div class="region-icon">📍</div>
+        <div>
+          <h3 data-i18n="r11">Muğla Merkez</h3>
+          <p>Muğla</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2><span data-i18n="gallery_title">Galeri</span></h2>
+      <div class="divider"></div>
+      <p data-i18n="gallery_subtitle">Araç ve hizmet görsellerimiz</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox(0)">
+        <img src="assets/arac-6-ic-yan.jpg" alt="Akın Transfer - VIP İç Mekan" loading="lazy">
+        <div class="gallery-overlay">
+          <svg width="36" height="36" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(1)">
+        <img src="assets/arac-7-arka.jpg" alt="Mercedes Vito - Arka" loading="lazy">
+        <div class="gallery-overlay">
+          <svg width="36" height="36" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(2)">
+        <img src="assets/arac-8-on.jpg" alt="Mercedes Vito - Ön" loading="lazy">
+        <div class="gallery-overlay">
+          <svg width="36" height="36" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(3)">
+        <img src="assets/arac-5-ic-mekan.jpg" alt="Mercedes Vito - İç Mekan" loading="lazy">
+        <div class="gallery-overlay">
+          <svg width="36" height="36" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(4)">
+        <img src="assets/arac-2-dugunu-yan.jpg" alt="Düğün Gelin Arabası" loading="lazy">
+        <div class="gallery-overlay">
+          <svg width="36" height="36" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(5)">
+        <img src="assets/arac-3-dugun-on.jpg" alt="Düğün Gelin Arabası - Ön" loading="lazy">
+        <div class="gallery-overlay">
+          <svg width="36" height="36" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2><span data-i18n="contact_title">İletişim</span></h2>
+      <div class="divider"></div>
+      <p data-i18n="contact_subtitle">Rezervasyon ve bilgi için bize ulaşın</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <div class="icon">📞</div>
+        <h3 data-i18n="contact_phone">Telefon</h3>
+        <p id="phone-number">+90 ___ ___ __ __</p>
+        <a href="tel:+90" class="btn-outline" data-i18n="contact_call">Hemen Ara</a>
+      </div>
+      <div class="contact-card reveal">
+        <div class="icon">💬</div>
+        <h3 data-i18n="contact_whatsapp">WhatsApp</h3>
+        <p id="wa-number">+90 ___ ___ __ __</p>
+        <a href="https://wa.me/90" target="_blank" class="btn-outline btn-outline--wa" data-i18n="contact_wa">WhatsApp'tan Yaz</a>
+      </div>
+      <div class="contact-card reveal">
+        <div class="icon">📧</div>
+        <h3 data-i18n="contact_email">E-posta</h3>
+        <p id="email-addr">info@akintransfer.com</p>
+        <a href="mailto:info@akintransfer.com" class="btn-outline" data-i18n="contact_email">E-posta Gönder</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">
+    <img src="assets/logo.png" alt="Akın Transfer" style="height:48px; filter:brightness(0.9);">
+  </div>
+  <p class="tagline" data-i18n="footer_tagline">Muğla'nın VIP Transfer Hizmeti</p>
+  <p data-i18n="footer_copy">© 2025 Akın Transfer. Tüm hakları saklıdır.</p>
+</footer>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">×</span>
+  <button class="lightbox-arrow lightbox-prev" onclick="lightboxPrev(event)">&#8249;</button>
+  <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-arrow lightbox-next" onclick="lightboxNext(event)">&#8250;</button>
+  <div class="lightbox-counter" id="lightbox-counter">1 / 6</div>
+</div>
+
+<!-- ===== SABİT WHATSAPP BUTONU ===== -->
+<a href="tel:+90" id="phone-float" class="phone-float" aria-label="Hemen ara">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+  </svg>
+</a>
+<a href="https://wa.me/90" target="_blank" id="wa-float" class="wa-float" aria-label="WhatsApp ile yazın">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.126 1.533 5.857L.057 23.571a.75.75 0 00.921.921l5.714-1.476A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.736-.518-5.287-1.422l-.374-.217-3.888 1.004 1.004-3.888-.217-.374A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+  </svg>
+</a>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
