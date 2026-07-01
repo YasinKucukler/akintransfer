@@ -143,9 +143,28 @@ ul { list-style: none; }
   border-color: var(--gold);
   color: var(--dark);
 }
-/* Masaüstünde dropdown ve üstteki tek buton gizli */
-.lang-dropdown { display: none; }
-.lang-switcher > .lang-btn { display: flex; }
+/* Masaüstü: dropdown içindeki 4 buton yan yana, tetikleyici buton gizli */
+.lang-switcher > .lang-btn { display: none; }
+.lang-dropdown {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  position: static;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+.lang-dropdown .lang-btn {
+  display: flex;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  min-height: auto;
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 4px;
+  width: auto;
+  justify-content: center;
+}
 
 /* Hamburger */
 .hamburger {
@@ -789,41 +808,23 @@ footer .tagline {
   }
   .nav-links li:last-child a { border-bottom: none; }
   .hamburger { display: flex; }
-  /* Mobil dil seçici — sadece aktif dil görünür, tıklayınca aşağı açılır */
-  .lang-switcher {
-    position: relative;
-  }
-  .lang-btn {
-    display: none;
-    padding: 8px 12px;
-    font-size: 0.85rem;
-    min-height: 36px;
-  }
-  .lang-btn.active {
+  /* Mobil dil seçici — tetikleyici buton görünür, dropdown gizli */
+  .lang-switcher > .lang-btn {
     display: flex;
     align-items: center;
     gap: 4px;
+    padding: 6px 10px;
+    font-size: 0.85rem;
   }
-  .lang-btn.active::after {
+  .lang-switcher > .lang-btn::after {
     content: '▾';
     font-size: 0.65rem;
     opacity: 0.7;
   }
-  .lang-switcher.open .lang-btn.active::after {
+  .lang-switcher.open > .lang-btn::after {
     content: '▴';
   }
-  .lang-switcher.open .lang-btn {
-    display: none;
-  }
-  .lang-switcher.open .lang-btn.active {
-    display: flex;
-  }
-  /* Açılan dropdown */
-  .lang-switcher.open::after {
-    content: '';
-    display: none;
-  }
-  .lang-switcher .lang-dropdown {
+  .lang-dropdown {
     display: none;
     position: absolute;
     top: calc(100% + 8px);
@@ -834,10 +835,10 @@ footer .tagline {
     overflow: hidden;
     z-index: 1001;
     min-width: 70px;
+    flex-direction: column;
   }
   .lang-switcher.open .lang-dropdown {
     display: flex;
-    flex-direction: column;
   }
   .lang-dropdown .lang-btn {
     display: flex;
