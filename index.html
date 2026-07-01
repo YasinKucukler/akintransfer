@@ -11,7 +11,7 @@
 <body>
 
 <!-- ===== NAVBAR ===== -->
-<nav class="navbar" id="navbar" dir="ltr">
+<nav class="navbar" id="navbar">
   <a href="#home" class="nav-logo">
     <img src="assets/logo.png" alt="Akın Transfer Logo">
   </a>
@@ -28,9 +28,12 @@
   <div style="display:flex;align-items:center;gap:16px;">
     <div class="lang-switcher">
       <button class="lang-btn active" data-lang="tr">TR</button>
-      <button class="lang-btn" data-lang="en">EN</button>
-      <button class="lang-btn" data-lang="de">DE</button>
-      <button class="lang-btn" data-lang="ar">AR</button>
+      <div class="lang-dropdown">
+        <button class="lang-btn" data-lang="tr">TR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+      </div>
     </div>
     <div class="hamburger" id="hamburger">
       <span></span><span></span><span></span>

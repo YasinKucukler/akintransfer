@@ -123,6 +123,7 @@ ul { list-style: none; }
   display: flex;
   gap: 6px;
   align-items: center;
+  position: relative;
 }
 .lang-btn {
   padding: 4px 10px;
@@ -142,6 +143,9 @@ ul { list-style: none; }
   border-color: var(--gold);
   color: var(--dark);
 }
+/* Masaüstünde dropdown ve üstteki tek buton gizli */
+.lang-dropdown { display: none; }
+.lang-switcher > .lang-btn { display: flex; }
 
 /* Hamburger */
 .hamburger {
@@ -149,7 +153,8 @@ ul { list-style: none; }
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  padding: 4px;
+  padding: 10px;        /* 44px dokunma hedefi için */
+  margin-right: -10px;
 }
 .hamburger span {
   display: block;
@@ -422,7 +427,7 @@ ul { list-style: none; }
   color: var(--white);
 }
 .region-card p {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: var(--gray);
   margin-top: 2px;
 }
@@ -491,13 +496,15 @@ ul { list-style: none; }
 }
 .lightbox-close {
   position: absolute;
-  top: 20px; right: 28px;
+  top: 12px; right: 16px;
   font-size: 2.4rem;
   color: white;
   cursor: pointer;
   line-height: 1;
   z-index: 2;
   transition: color var(--trans);
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
 }
 .lightbox-close:hover { color: var(--gold); }
 
@@ -549,6 +556,8 @@ ul { list-style: none; }
 .contact {
   padding: 100px 0;
   background: var(--dark2);
+  position: relative;
+  z-index: 1;        /* sabit butonların arkasında kalmasın */
 }
 .contact-grid {
   display: grid;
@@ -640,7 +649,7 @@ footer p {
 }
 footer .tagline {
   color: rgba(201,168,76,0.6);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   margin-bottom: 4px;
 }
 
@@ -780,15 +789,15 @@ footer .tagline {
   }
   .nav-links li:last-child a { border-bottom: none; }
   .hamburger { display: flex; }
-  /* Mobil dil seçici — sadece aktif dil görünür, tıklayınca açılır */
+  /* Mobil dil seçici — sadece aktif dil görünür, tıklayınca aşağı açılır */
   .lang-switcher {
     position: relative;
-    flex-direction: row-reverse; /* aktif buton sağda, açılanlar solda */
   }
   .lang-btn {
     display: none;
-    padding: 6px 10px;
-    font-size: 0.78rem;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    min-height: 36px;
   }
   .lang-btn.active {
     display: flex;
@@ -800,12 +809,49 @@ footer .tagline {
     font-size: 0.65rem;
     opacity: 0.7;
   }
-  .lang-switcher.open .lang-btn {
-    display: flex;
-    align-items: center;
-  }
   .lang-switcher.open .lang-btn.active::after {
     content: '▴';
+  }
+  .lang-switcher.open .lang-btn {
+    display: none;
+  }
+  .lang-switcher.open .lang-btn.active {
+    display: flex;
+  }
+  /* Açılan dropdown */
+  .lang-switcher.open::after {
+    content: '';
+    display: none;
+  }
+  .lang-switcher .lang-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: rgba(10,10,10,0.97);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1001;
+    min-width: 70px;
+  }
+  .lang-switcher.open .lang-dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+  .lang-dropdown .lang-btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 12px 16px;
+    font-size: 0.85rem;
+    min-height: 44px;
+  }
+  .lang-dropdown .lang-btn:last-child {
+    border-bottom: none;
   }
 
   /* Scroll arrows — mobilde gizle */
@@ -886,7 +932,7 @@ footer .tagline {
 
   /* Lightbox */
   .lightbox-arrow {
-    width: 40px; height: 40px;
+    width: 44px; height: 44px;
     font-size: 2rem;
   }
   .lightbox-prev { left: 8px; }

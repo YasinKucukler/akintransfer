@@ -1,14 +1,15 @@
 // ===== LANGUAGE SWITCHER =====
 let currentLang = 'tr';
+const langSwitcher  = document.querySelector('.lang-switcher');
+const activeBtn     = langSwitcher.querySelector('.lang-btn.active');   // üstteki tek buton
+const dropdownBtns  = langSwitcher.querySelectorAll('.lang-dropdown .lang-btn');
 
 function setLang(lang) {
   currentLang = lang;
 
-  // RTL for Arabic
   document.documentElement.setAttribute('lang', lang);
   document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
 
-  // Update all data-i18n elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
@@ -16,36 +17,44 @@ function setLang(lang) {
     }
   });
 
-  // Active button
-  document.querySelectorAll('.lang-btn').forEach(btn => {
+  // Üstteki aktif butonu güncelle
+  activeBtn.textContent = lang.toUpperCase();
+  activeBtn.dataset.lang = lang;
+
+  // Dropdown içindeki aktif işareti güncelle
+  dropdownBtns.forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
 
-  // Save preference
   localStorage.setItem('akin_lang', lang);
 
-  // Mobil dropdown'ı kapat
-  document.querySelector('.lang-switcher').classList.remove('open');
+  // Dropdown'ı kapat
+  langSwitcher.classList.remove('open');
 }
 
-document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => setLang(btn.dataset.lang));
-});
-
-// Mobil: seçili dil etiketine tıklayınca dropdown aç/kapat
-document.querySelector('.lang-switcher').addEventListener('click', function(e) {
+// Üstteki aktif butona tıklayınca dropdown aç/kapat (sadece mobil)
+activeBtn.addEventListener('click', function(e) {
+  e.stopPropagation();
   if (window.innerWidth <= 768) {
-    // Aktif butona tıklandıysa dropdown'ı toggle et
-    if (e.target.classList.contains('active')) {
-      this.classList.toggle('open');
-    }
+    langSwitcher.classList.toggle('open');
   }
 });
+
+// Dropdown seçenekleri
+dropdownBtns.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    setLang(btn.dataset.lang);
+  });
+});
+
+// Masaüstü: eski davranış (tüm butonlar görünür, direkt tıklama)
+// activeBtn masaüstünde zaten hidden olmadığı için aktif buton da çalışır
 
 // Dışarı tıklayınca kapat
 document.addEventListener('click', function(e) {
   if (!e.target.closest('.lang-switcher')) {
-    document.querySelector('.lang-switcher').classList.remove('open');
+    langSwitcher.classList.remove('open');
   }
 });
 
@@ -195,10 +204,12 @@ updateScrollArrows();
 // ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(a.getAttribute('href'));
+    const href = a.getAttribute('href');
+    if (!href || href === '#') return;
+    const target = document.querySelector(href);
     if (target) {
-      const offset = 80;
+      e.preventDefault();
+      const offset = 70;
       window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
     }
   });
