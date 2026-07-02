@@ -8,7 +8,7 @@ const translations = {
     nav_contact: "İletişim",
 
     hero_brand: "Akın Transfer",
-    hero_title: "Lüks VIP Transfer",
+    hero_title: "Dalaman Havalimanı VIP Transfer",
     hero_subtitle: "Mercedes Vito ile Muğla'nın en prestijli transfer deneyimi",
     hero_cta: "Rezervasyon Yap",
     hero_badge: "7 Kişilik Konfor",

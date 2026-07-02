@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yasinkucukler.github.io/akintransfer/sitemap.xml
