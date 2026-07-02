@@ -193,7 +193,7 @@ ul { list-style: none; }
   height: 100vh;
   min-height: 600px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   overflow: hidden;
 }
@@ -222,7 +222,7 @@ ul { list-style: none; }
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 0 20px 80px;
+  padding: 90px 20px 40px; /* üst: navbar yüksekliği kadar boşluk */
   max-width: 860px;
   width: 100%;
 }
@@ -898,7 +898,7 @@ footer .tagline {
 
   /* Hero */
   .hero-content {
-    padding: 0 16px 60px;
+    padding: 70px 16px 32px;
   }
   .hero-bg {
     background-image: url('../hero-bg-mobile.png');
