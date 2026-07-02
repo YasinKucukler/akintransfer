@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1782906336741" clover="3.2.0">
+  <project timestamp="1782906336742" name="All files">
+    <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="11" coveredelements="11" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1"/>
+    <file name="loadScripts.js" path="C:\PROJECTS\Akin-transfer\tests\helpers\loadScripts.js">
+      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="1" count="4" type="stmt"/>
+      <line num="2" count="4" type="stmt"/>
+      <line num="4" count="4" type="stmt"/>
+      <line num="9" count="4" type="stmt"/>
+      <line num="90" count="43" type="stmt"/>
+      <line num="94" count="43" type="stmt"/>
+      <line num="95" count="43" type="stmt"/>
+      <line num="98" count="43" type="stmt"/>
+      <line num="110" count="43" type="stmt"/>
+      <line num="113" count="4" type="stmt"/>
+    </file>
+  </project>
+</coverage>
