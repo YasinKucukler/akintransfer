@@ -222,19 +222,20 @@ ul { list-style: none; }
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 90px 20px 40px; /* üst: navbar yüksekliği kadar boşluk */
+  padding: 0 20px 120px;
   max-width: 860px;
   width: 100%;
 }
 .hero-badge {
   display: inline-block;
   padding: 6px 18px;
-  border: 1px solid var(--gold);
+  border: 1px solid #3b82f6;
   border-radius: 30px;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: var(--gold);
+  color: #ffffff;
+  background: rgba(59,130,246,0.25);
   text-transform: uppercase;
   margin-bottom: 20px;
   animation: fadeInDown 0.8s ease 0.2s both;
