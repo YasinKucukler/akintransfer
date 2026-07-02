@@ -193,7 +193,7 @@ ul { list-style: none; }
   height: 100vh;
   min-height: 600px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   overflow: hidden;
 }
@@ -229,13 +229,12 @@ ul { list-style: none; }
 .hero-badge {
   display: inline-block;
   padding: 6px 18px;
-  border: 1px solid #3b82f6;
+  border: 1px solid var(--gold);
   border-radius: 30px;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #ffffff;
-  background: rgba(59,130,246,0.25);
+  color: var(--gold);
   text-transform: uppercase;
   margin-bottom: 20px;
   animation: fadeInDown 0.8s ease 0.2s both;
